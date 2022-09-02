@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+html {
+    height: 100vh;
+    background-image: linear-gradient(#61A5FC, #5EE7DF);
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -17,39 +22,45 @@ a {
     padding: 17px;
     display: flex;
     justify-content: space-between;
-    &-menu{
+
+    &-menu {
         transition: all 0.2s ease-in-out;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         // align-items: center;
         // display: none;
         // transform: translateX(-100%);
-        & ::after{
+        & ::after {
             position: absolute;
             display: block;
             background-color: black;
             width: 1000px;
             height: 1000px;
         }
+
         color: #fff;
         top: 0;
         left: 0;
         position: absolute;
-        &-title{
+
+        &-title {
             margin-bottom: 47px;
             margin-top: 17px;
         }
     }
-    &-more{
+
+    &-more {
         background-color: white;
         // height: 100%;
         display: flex;
         flex-direction: column;
         // justify-content: space-between;
-        height: 1000px;
+        height: 100vh;
         padding-top: 40px;
-        & a{
+
+        & a {
             display: list-item;
             list-style: none;
             margin: 0 0 16px 40px;
@@ -57,19 +68,22 @@ a {
 
         }
     }
-    &-menu-item{
+
+    &-menu-item {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 416px;
-        background-image: linear-gradient(to right,#01FE9C,#5591F1);
+        background-image: linear-gradient(to right, #01FE9C, #5591F1);
     }
-    &-menu-userinf{
+
+    &-menu-userinf {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 47px;
+
         & :first-child {
             width: 64px;
             height: 64px;
@@ -77,10 +91,10 @@ a {
         }
     }
 
-    &-more{
+    &-more {
         display: flex;
         flex-direction: column;
-        
+
     }
 
     &-logo-icon {
@@ -97,9 +111,9 @@ a {
             cursor: pointer;
             z-index: 100;
             position: absolute;
-            
+
         }
-        
+
     }
 
     &-mode {
@@ -120,7 +134,7 @@ a {
 }
 
 .container {
-    background-image: linear-gradient(#61A5FC, #5EE7DF);
+    // background-image: linear-gradient(#61A5FC, #5EE7DF);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -139,8 +153,6 @@ a {
     & .content {
         &-left {
             background-color: white;
-
-            // height: 540px;
             & h1 {
                 margin: 64px auto;
             }
@@ -170,9 +182,8 @@ a {
             display: flex;
             justify-content: center;
             align-items: center;
-            // margin: 0 auto;
-
             margin-left: 80px;
+            width: auto;
         }
 
         &-search input {
@@ -258,4 +269,32 @@ a {
     background-color: white;
     position: relative;
     margin: 16px auto;
+}
+
+@media only screen and (max-width: 1142px) {
+    h1 {
+        font-size: 24px;
+    }
+    body{
+        width: 100vh;
+    }
+    .content-search {
+        width: 70%;
+        height: 30px;
+        & input{
+            padding: 0px;
+            height: 30px;
+            width: 70%;
+        }
+        &-icon {
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            font-size: 15px
+            ;
+            & i {
+                font-size: 15px;
+            }
+        }
+    }
 }

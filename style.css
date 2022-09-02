@@ -18,11 +18,74 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.header-menu {
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.header-menu ::after {
+  position: absolute;
+  display: block;
+  background-color: black;
+  width: 1000px;
+  height: 1000px;
+}
+.header-menu-title {
+  margin-bottom: 47px;
+  margin-top: 17px;
+}
+.header-more {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+  padding-top: 40px;
+}
+.header-more a {
+  display: list-item;
+  list-style: none;
+  margin: 0 0 16px 40px;
+  padding: 16px 0;
+}
+.header-menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 416px;
+  background-image: linear-gradient(to right, #01FE9C, #5591F1);
+}
+.header-menu-userinf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 47px;
+}
+.header-menu-userinf :first-child {
+  width: 64px;
+  height: 64px;
+  margin-right: 20px;
+}
+.header-more {
+  display: flex;
+  flex-direction: column;
+}
 .header-logo-icon :not(:first-child) {
   margin-left: 20px;
 }
 .header-logo-icon .fa-cloud-sun {
   font-size: 32px;
+  margin-left: 50px;
+}
+.header-logo-icon .fa-bars {
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
 }
 .header-mode {
   display: flex;
@@ -67,7 +130,6 @@ a {
 .container .content-item {
   display: flex;
   flex-direction: column;
-  max-width: 615px;
   align-items: center;
 }
 .container .content-search {
